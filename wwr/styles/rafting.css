@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:ital,wght@0,100..700;1,100..700&family=Yeseva+One&display=swap');
+
+:root {
+    --primary-color: #0D4B58;
+    --secondary-color: #83D1D5;
+    --accent1-color: #FF9400;
+    --accent2-color: #A3DCED;
+  
+    --heading-font: 'Yeseva One', serif;
+    --paragraph-font: 'Josefin Sans', sans-serif;
+  
+    --nav-background-color: #0D4B58;
+    --nav-link-color: #A3DCED;
+    --nav-hover-link-color: #0D4B58;
+    --nav-hover-background-color: #A3DCED;
+  }
+
+  body {
+    max-width: 1280px;
+    font-family: var(--paragraph-font);
+    margin: auto;
+  }
+
+  footer {
+    max-width: 1280px;
+    font-family: var(--paragraph-font);
+    margin: auto;
+  }
+
+  header {
+    background-color: var(--nav-background-color);
+  }
+
+  header img {
+    margin-left: 100px;
+    filter: invert(100%);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--heading-font);
+  }
+
+  .main-nav {
+    background-color: var(--nav-background-color);
+    font-size: 1.2rem;
+    display: flex;
+    padding-top: 40px;
+    padding-right: 30%;
+    float: right;
+  }
+  
+  .main-nav a {
+    display: block;
+    color: var(--nav-link-color);
+    text-decoration: none;
+    padding: 1rem;
+  }
+  
+  .main-nav a:link, nav a:visited {
+    color: var(--nav-link-color);
+  }
+  
+  .main-nav a:hover {
+    color: var(--nav-hover-link-color);
+    background-color: var(--nav-hover-background-color);
+  }
+
+  .hero {
+    position: relative;
+  }
+
+  .hero h1 {
+    position: absolute;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+    background-color: rgba(0, 0, 0, .5);
+    margin-top: 10%;
+    padding: 2%;
+  }
+
+  .hero img {
+    display: block;
+    width: 100%;
+    height: auto;
+    float: right;
+  }
+
+  .hero article img {
+    width: 20rem;
+    padding-left: 20px;
+    border-radius: 0 40px 20px 0;
+  }
+
+  .action {
+    position: absolute;
+    background-color: var(--accent1-color);
+    width: 80%;
+    margin-top: 35%;
+    margin-left: 10%;
+    color: #fff;
+    font-weight: 700;
+    padding: 20px;
+    border-radius: 15px 50px;
+  }
+
+  .social-links img {
+    width: 50px;
+    text-decoration: none;
+  }
+
+  
