@@ -19,63 +19,88 @@
     --nav-link-color: #A3DCED;
     --nav-hover-link-color: #0D4B58;
     --nav-hover-background-color: #A3DCED;
-  }
+}
 
-  body {
+body {
     max-width: 1280px;
     font-family: var(--paragraph-font);
     margin: auto;
-  }
+    line-height: 1.5em;
+}
 
-  footer {
+footer {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    align-items: center;
+    justify-items: center;
     max-width: 1280px;
     font-family: var(--paragraph-font);
     margin: auto;
-  }
-
-  header {
+    padding: 50px 0;
     background-color: var(--nav-background-color);
-  }
+}
 
-  header img {
-    margin-left: 100px;
+footer p {
+    grid-column: 2/3;
+    color: #fff;
+}
+
+ header {
+    background-color: var(--nav-background-color);
+    padding: 1rem 0 1rem 0;
+    display: grid;
+    grid-template-columns: 1fr 2fr 150px;
+    align-items: center;
+    column-gap: 30px;
+}
+
+header img {
     filter: invert(100%);
-  }
+    display: block;
+    margin-left: auto;
+}
 
-  h1, h2, h3, h4, h5, h6 {
+h1, h2, h3, h4, h5, h6 {
     font-family: var(--heading-font);
-  }
+}
 
-  .main-nav {
+figcaption {
+  font-size: .9rem;
+}
+
+
+/* class selectors */
+
+.main-nav {
     background-color: var(--nav-background-color);
     font-size: 1.2rem;
     display: flex;
-    padding-top: 40px;
-    padding-right: 30%;
-    float: right;
-  }
+    justify-content: space-around;
+
+}
   
-  .main-nav a {
+.main-nav a {
     display: block;
     color: var(--nav-link-color);
     text-decoration: none;
-    padding: 1rem;
-  }
+    padding: 2rem;
+}
   
-  .main-nav a:link, nav a:visited {
+.main-nav a:link, nav a:visited {
     color: var(--nav-link-color);
-  }
+}
   
-  .main-nav a:hover {
+.main-nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
-  }
+    opacity: 50%;
+}
 
-  .hero {
+.hero {
     position: relative;
-  }
+}
 
-  .hero h1 {
+.hero h1 {
     position: absolute;
     color: #fff;
     width: 100%;
@@ -83,22 +108,22 @@
     background-color: rgba(0, 0, 0, .5);
     margin-top: 10%;
     padding: 2%;
-  }
+}
 
-  .hero img {
+.hero img {
     display: block;
     width: 100%;
     height: auto;
     float: right;
-  }
+}
 
-  .hero article img {
+.hero article img {
     width: 20rem;
     padding-left: 20px;
     border-radius: 0 40px 20px 0;
-  }
+}
 
-  .action {
+.action {
     position: absolute;
     background-color: var(--accent1-color);
     width: 80%;
@@ -108,11 +133,94 @@
     font-weight: 700;
     padding: 20px;
     border-radius: 15px 50px;
-  }
+}
 
-  .social-links img {
-    width: 50px;
+.action h2 {
+  margin-top: 30px;
+  text-align: center;
+}
+
+.action p {
+  margin-top: 30px;
+  padding: 0 30px;
+}
+
+.social-links {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: 20px;
+}
+
+.social-links img {
+    width: 40px;
     text-decoration: none;
-  }
+    filter: invert(100%);
+}
 
-  
+.social-links a:hover {
+  opacity: 50%;
+}
+
+.grid-container-1 {
+    clear: both;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 10px;
+    background-color: var(--nav-background-color);
+}
+
+.grid-container-1 h2 {
+    grid-column: 1 / 4;
+    text-align: center;
+    color: #fff;
+}
+
+.grid-container-1 p {
+  color: #fff;
+}
+
+.grid-container-1, .first-para {
+    grid-row: 2;
+    padding-left: 20px;
+}
+
+.grid-container-1 img {
+    grid-column: 2 / 3;
+    grid-row: 2;
+    max-width: 90%;
+    height: auto;
+    justify-self: center;
+    align-self: center;
+}
+
+.grid-container-1, .second-para {
+    grid-column: 3 / 4;
+    grid-row: 2;
+    padding-right: 20px;
+}
+
+.grid-container-2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  row-gap: 30px;
+  padding: 100px 0;
+}
+
+.grid-container-2 img {
+  max-width: 200px;
+  height: auto;
+  border: solid 4px var(--accent1-color);
+}
+
+.grid-container-2 h2 {
+  grid-column: 1 / 6;
+  justify-self: center;
+}
+
+.grid-container-2 figure {
+  grid-row: 2;
+  justify-self: center;
+}
+
