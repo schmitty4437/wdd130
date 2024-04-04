@@ -8,7 +8,7 @@
 
 :root {
     --primary-color: #0D4B58;
-    --secondary-color: #83D1D5;
+    --secondary-color: #83d1d5;
     --accent1-color: #FF9400;
     --accent2-color: #fff;
   
@@ -18,7 +18,7 @@
     --nav-background-color: #0D4B58;
     --nav-link-color: #A3DCED;
     --nav-hover-link-color: #0D4B58;
-    --nav-hover-background-color: #A3DCED;
+    --nav-hover-background-color: #a3dced;
 }
 
 body {
@@ -90,7 +90,7 @@ figcaption {
     display: block;
     color: var(--nav-link-color);
     text-decoration: none;
-    padding: 2rem;
+    padding: 1rem;
 }
   
 .main-nav a:link, nav a:visited {
@@ -100,6 +100,11 @@ figcaption {
 .main-nav a:hover {
     color: var(--nav-hover-link-color);
     background-color: var(--nav-hover-background-color);
+}
+
+.main-nav .active {
+    color: var(--accent2-color);
+    border-bottom: solid 3px var(--accent2-color);
 }
 
 .hero {
@@ -167,19 +172,28 @@ figcaption {
   opacity: 50%;
 }
 
-.grid-container-1 {
+.grid-container-1, .grid-container-4 {
     clear: both;
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.grid-container-1 {
     padding-top: 50px;
     padding-bottom: 50px;
-    gap: 10px;
+}
+
+.grid-container-1 {
     background-color: var(--nav-background-color);
 }
 
-.grid-container-1 h2 {
+.grid-container-1 h2, .grid-container-4 h2 {
     grid-column: 1 / 4;
     text-align: center;
+}
+
+.grid-container-1 {
     color: var(--accent2-color);
 }
 
@@ -227,7 +241,10 @@ figcaption {
 .grid-container-2 h2 {
   grid-column: 1 / 6;
   justify-self: center;
-  color: var(--primary-color);
+}
+
+.grid-container-2 h2, .grid-container-4 h2, .grid-container-5 h2, .grid-container-7 h2, .grid-container-8 h2, .grid-container-9 h2 {
+    color: var(--primary-color);
 }
 
 .grid-container-2 figure {
@@ -394,7 +411,7 @@ button {
     grid-template-columns: repeat(3, 1fr);
 }
 
-.company-grid h2 {
+.company-grid h2, .grid-container-5 h2 {
     grid-column: 1/4;
     text-align: center;
     padding-bottom: 2rem;
@@ -420,3 +437,236 @@ button {
     font-size: 1.2em;
     font-weight: 600;
 }
+
+
+/* Trips page */
+.grid-container-4 img, .grid-container-5 img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.grid-container-4 img {
+    margin-top: 40px;
+    border: 3px solid var(--secondary-color);
+    border-radius: 5px;
+}
+
+.grid-container-4 .first-para, .grid-container-4 .second-para, .grid-container-4 .third-para {
+    padding: 1rem 3rem 2rem 3rem;
+    color: var(--accent2-color);
+}
+
+.grid-container-4 article {
+    background-color: #0D4B58;
+    margin: 8px;
+}
+
+.grid-container-4 h2 {
+    padding-bottom: 3rem;
+}
+
+.grid-container-4 h3 {
+    color: var(--accent2-color);
+    text-align: center;
+    padding-top: 1.5rem;
+}
+
+
+.grid-container-5 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 4rem 0;
+}
+
+.grid-container-5 table {
+    grid-column: 1/3;
+}
+
+.grid-container-5 img {
+    grid-column: 3/4;
+    width: 80%;
+    margin-top: 5rem;
+    border: 6px solid var(--accent1-color);
+    filter: drop-shadow(20px 20px 10px rgba(0, 0, 0, 0.5));
+    border-radius: 10px;
+}
+
+.grid-container-5 ul {
+    list-style-type: none;
+}
+
+.call-action {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    background-color: var(--secondary-color);
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5rem;
+    border-radius: 1.5rem;
+    padding: 1rem;
+}
+
+.cu-statement, .cu-action {
+    justify-self: center;
+    align-self: center;
+}
+
+.cu-statement {
+    grid-column: 1/3;
+    font-size: 1.3rem;
+    font-weight: 600;
+}
+
+.cu-action {
+    grid-column: 3/4;
+}
+
+.call-action a:link {
+    text-decoration: none;
+}
+
+.call-action a:hover p {
+    opacity: 80%;
+}
+
+.cu-button {
+    
+    background-color: #0D4B58;
+    width: 100%;
+    color: var(--accent2-color);
+    text-align: center;
+    border-radius: 30px;
+    padding: 1.5rem 1.5rem;
+    font-size: 2rem;
+}
+
+
+
+
+
+/* Table CSS */
+
+table {
+    border-collapse: collapse;
+    font-family: sans-serif;
+    font-size: .9rem;
+    letter-spacing: 1px;
+  }
+  
+  caption {
+    caption-side: bottom;
+    padding: 15px;
+    font-weight: bold;
+  }
+  
+  thead, th {
+    font-size: 1.2rem;
+  }
+
+  thead {
+    background-color: var(--primary-color);
+    color: var(--accent2-color);
+  }
+  
+  th,
+  td {
+    border: none;
+    padding: 18px 20px;
+  }
+  
+  td:last-of-type {
+    text-align: center;
+    font-weight: 700;
+    font-size: 1.5rem;
+  }
+  
+  tbody > tr:nth-of-type(even) {
+    background-color: rgba(131, 209, 213, 0.4);
+  }
+
+
+
+  /* Home page */
+
+  .grid-container-7 {
+    margin-bottom: 5rem;
+  }
+
+  .grid-container-7, .grid-container-8 {
+    clear: both;
+    display: grid;
+    grid-template-columns: 2fr 1fr 2fr;
+  }
+
+  .grid-container-7 h2, .grid-container-8 h2 {
+    grid-column: 1/5;
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+
+  .grid-container-7 h2 {
+    margin-top: 3rem;
+  }
+
+  .grid-container-7 img, .grid-container-8 img {
+    grid-column: 1/3;
+    width: 80%;
+    margin: auto;
+  }
+
+  .why-para, .offer-para {
+    margin: auto;
+    padding: 0 3rem;
+  }
+
+ .why-para {
+    grid-column: 3/5;
+    margin: auto;
+  }
+
+  .offer-para {
+    grid-column: 1/2;
+  }
+
+  .grid-container-8 .trips-statement, .grid-container-8 .trips-button {
+    grid-row: 3;
+  }
+
+  .grid-container-8 .offer-img {
+    grid-row: 2;
+    grid-column: 2/5;
+    margin: auto;
+  }
+
+  .grid-container-8 h2, .offer-para {
+    color: var(--accent2-color);
+  }
+  .grid-container-8 {
+    margin: 5rem 0;
+    background-color: var(--primary-color);
+    padding: 3.5rem 0;
+  }
+  
+  .grid-container-9 {
+    display: grid;
+    grid-template-columns: repeat(2, 2fr);
+    margin-bottom: 5rem;
+  }
+
+  .grid-container-9 form {
+    margin: 0 auto 6rem auto;
+  }
+
+  .grid-container-9 h2 {
+    grid-column: 2/5;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+
+  .grid-container-9 img {
+    grid-row: 1/3;
+    margin: auto  ;
+  }
+
