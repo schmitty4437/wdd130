@@ -182,23 +182,13 @@ figcaption {
 .grid-container-1 {
     padding-top: 50px;
     padding-bottom: 50px;
-}
-
-.grid-container-1 {
     background-color: var(--nav-background-color);
+    color: var(--accent2-color);
 }
 
 .grid-container-1 h2, .grid-container-4 h2 {
     grid-column: 1 / 4;
     text-align: center;
-}
-
-.grid-container-1 {
-    color: var(--accent2-color);
-}
-
-.grid-container-1 p {
-  color: var(--accent2-color);
 }
 
 .grid-container-1, .first-para {
@@ -520,8 +510,7 @@ button {
     opacity: 80%;
 }
 
-.cu-button {
-    
+.cu-button {  
     background-color: #0D4B58;
     width: 100%;
     color: var(--accent2-color);
@@ -619,7 +608,7 @@ table {
     grid-column: 1/2;
   }
 
-  .grid-container-8 .trips-statement, .grid-container-8 .trips-button {
+  .trips-statement, .trips-button {
     grid-row: 3;
   }
 
@@ -663,11 +652,11 @@ table {
     filter: drop-shadow(5px 5px 10px rgba(13, 75, 88, 0.6));
   }
 
-  .grid-container-8 .trips-button {
+  .trips-button {
     background-color: var(--secondary-color);
   }
 
-  .grid-container-8 .trips-button, .grid-container-8 .trips-link {
+.trips-button, .trips-link {
     margin: auto;
     padding: 1rem 2.5rem 1rem 2.5rem;
     border-radius: 10px;
@@ -676,7 +665,7 @@ table {
   .grid-container-8 h3 {
     color: var(--primary-color);
   }
-.grid-container-8 .trips-button {
+ .trips-button {
     border: 1.5px solid var(--accent2-color);
     filter: drop-shadow(5px 5px 10px rgba(0, 0, 0, 0.8));
 }
