@@ -318,8 +318,6 @@ button {
     margin: 0 0 0 30px;
 }
 
-
-
 .form-item {
     display: grid;
 }
@@ -401,7 +399,7 @@ button {
     padding: 50px 0;
 }
 
-.company-grid {
+.company-grid, .grid-container-5, .call-action {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -467,10 +465,7 @@ button {
     padding-top: 1.5rem;
 }
 
-
 .grid-container-5 {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     padding: 4rem 0;
 }
 
@@ -492,8 +487,6 @@ button {
 }
 
 .call-action {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
     background-color: var(--secondary-color);
     width: 80%;
     margin-left: auto;
