@@ -260,6 +260,8 @@ form {
     padding: 20px;
     border: 1px solid var(--primary-color);
     border-radius: 10px;
+    grid-column: 2/5;
+    margin: 0 0 0 120px;
 }
 
 fieldset {
@@ -300,13 +302,9 @@ button {
 }
 
 .grid-container-3 {
-    margin: 30px 10px 0 10px;
-
-}
-
-.grid-container-3 {
     display: grid;
     grid-template-columns: 2fr 1fr 2fr;
+    margin: 30px 10px 0 10px;
 }
 
 .grid-container-3 h1 {
@@ -320,10 +318,7 @@ button {
     margin: 0 0 0 30px;
 }
 
-.grid-container-3 form {
-    grid-column: 2/5;
-    margin: 0 0 0 120px;
-}
+
 
 .form-item {
     display: grid;
